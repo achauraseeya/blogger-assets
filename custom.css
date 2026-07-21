@@ -1,0 +1,57 @@
+/* custom.css - Dynamic Styling hosted on GitHub Pages */
+/* Automatically linked from your Blogger XML theme. */
+
+:root {
+  --primary-color: #6366f1;
+  --accent-color: #a5b4fc;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+/* Smooth reading experience enhancements */
+.post-card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.post-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Markdown styling overrides if your posts contain rich code blocks */
+pre, code {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: #f1f5f9;
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+.dark pre, .dark code {
+  background-color: #334155;
+  color: #f1f5f9;
+}
+
+/* Custom Notification animations */
+@keyframes slide-down {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(0); }
+}
+#notice-banner {
+  animation: slide-down 0.3s ease-out;
+}
+
+/* Fluid reading layout enhancements for single post views */
+.post-body {
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
